@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+	<title>My Tasks - Yungas</title>
+{% endblock %}
+
+
+{% block main%}
+	<div class="wizard-header">
+		<div class="container panel-todo">
+        <div class="row d-flex justify-content-center title-todo">
+          <img src="{% static 'img/logo.png' %}" class="logo-yungas">
+        </div>
+		<h5>Simplifique e gerencie seu dia.</h5>
+	</div>
+	
+	<!-------------------------------------------Filter Tasks------------------------------------------------------->
+	<div class="container task d-flex justify-content-center">
+		<div class="btn-group" role="group" aria-label="Basic example">
+			<button type="button" id="todo" onclick="todoGet(this.id)" class="btn btn-light">À Fazer</button>
+			<button type="button" id="done" onclick="doneGet(this.id)" class="btn btn-light">Completas</button>
+			<button type="button" id="filed" onclick="filedGet(this.id)" class="btn btn-light">Arquivadas</button>
+		</div>
+	</div>	
+	<!-------------------------------------------------------------------------------------------------------------->
+
+	<!-------------------------------------------Add a Task--------------------------------------------------------->
+	<div class="container task">
+		<form method="POST" action="add-task" onsubmit="return testField (this)">{% csrf_token %}
+			
+			<!-- Title Field  -->
+			<div class="form-group">
+				<input class="form-control" maxlength="55" type="text" name="title" id="title" placeholder="Insira o título aqui...">
+			</div>
+
+			<!-- Description Field  -->
+			<div class="form-group">
+				<input class="form-control" maxlength="100" type="text" name="desc" id="desc" placeholder="Insira a descrição aqui...">
+			</div>
+
+			<!-- Deadline Field (using Datepicker) -->
+			<div class="form-group">
+				 <div class="input-group date w-25" id="datetimepicker1" data-target-input="nearest">
+					<input type="text" class="form-control datetimepicker-input" name="deadline" placeholder="Prazo de entrega" id="deadline" data-target="#datetimepicker1" autocomplete="off"/>
+					<i data-target="#datetimepicker1" data-toggle="datetimepicker" class="fa fa-calendar"></i>
+			    </div>
+			</div>
+
+			<!-- Add button -->
+			<div class="input-group-append d-flex justify-content-center">
+				<button class="btn btn-light add" type="submit">Adicionar</button> 
+			</div>
+		</form>	
+	</div>
+	<!-------------------------------------------Task List---------------------------------------------------------->
+	<div class="container task" id="task-div"></div>		
+	<!----------------------------------------------------------------------------------------------------------------->
+
+{% endblock %}

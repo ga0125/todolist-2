@@ -1,0 +1,136 @@
+.task {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.btn-group {
+	width: 100%;
+}
+
+.btn-light{
+	background: #eee!important;
+	color: #555555!important;
+}
+
+.btn-light:hover {
+	color: #fff!important;
+	background: #f2668a!important;
+}
+
+.add, .btn-light:focus {
+	color: #fff!important;
+	background: #E62254!important;
+}
+
+.task-group {
+    border: solid 1px;
+}
+
+.btn-act {
+	color: #c2c2c2!important;
+    float: right;
+    margin: 2% 9% 1.5% 0%;
+}
+
+.btn-act:hover{
+	color: #E62254!important;
+}
+
+.task-menu{
+	border: 1px solid #ced4da;
+}
+
+.chk-todo {
+	color: #3e5055!important;
+    margin: 0% 0% 0% 50%
+}
+
+.chk-act {
+	color: #28A745!important;
+    margin: 0% 0% 0% 50%
+}
+
+.chk-todo:hover,.chk-act:hover {
+	color: #28A745!important;
+}
+
+.chk-done {
+	color: #28A745!important;
+    margin: 0% 0% 0% 50%	
+}
+
+.chk-filed {
+	color: #3e5055!important;
+    margin: 0% 0% 0% 50%	
+}
+
+.dln-act {
+	font-family:  400 13.3333px Arial;
+	font-size: 12px;
+    float: right;
+    margin: 1% 9% 0% 0%;
+    color: #c2c2c2!important;
+}
+
+.task-menu, .dln-act:hover {
+   color: #E62254!important;
+}
+
+.custom-control-label{
+	margin-left: 1%;	
+}
+
+.custom-control{
+	margin-top: 1%;
+}
+
+.desc-task {
+	margin: -1.5% 0% 2% 0%;
+    border-radius: 0px!important;
+}
+
+.done-task {
+	float: left;
+	text-decoration: line-through;
+	color: #c2c2c2!important;
+	width: 58%;
+}
+
+.filed-task {
+	float: left;
+	color: #c2c2c2!important;
+	width: 58%;	
+}
+
+.task-title {
+	float: left;
+	width: 58%;
+}
+.fa-calendar {
+	color:#E62254!important;
+    margin: 4.5% 26% 0% 0%!important;
+}
+
+.logo-yungas {
+	width: 246px;
+}
+
+.desc-sub {
+	font-weight: bold;
+	color: #E62254!important;
+	float: left;
+    margin-left: 2%;
+}
+
+.desc-line {
+	float: left;
+    margin-left: 1.5%;
+}
+
+.table {
+	table-layout: fixed;
+}
+
+.th-task {
+	width: 10%
+}
