@@ -41,7 +41,7 @@ To run this applcation you'll need install these guys below:
 
 1. Please clone our application running the following command on a terminal: 
 ```
-git clone https://github.com/ga0125/todolist.git
+git clone https://github.com/ga0125/todolist-2.git
 ```
 2. Setup your Machine:
 
